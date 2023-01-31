@@ -19,7 +19,7 @@ my_bucket = s3.Bucket(bucketname)
 for row in dev_dictionary:
     source=row['source']
     target=row['target']
-    result ='source="{}" target="{}"'.format(source, target)
+    'source="{}" target="{}"'.format(source, target)
     for obj in my_bucket.object.filter(Prefix=source):
         source_filename = (obj.key).split("/")[-1]
         copy_source = {
